@@ -122,6 +122,7 @@
 #loginSection .container .leftContainer .formContainer form .forgetPass a {
     font-size: .7rem;
     color: #444444;
+    cursor: pointer;
 }
 
 #loginSection .container .leftContainer .formContainer form .signInBtn {
@@ -134,6 +135,7 @@
     font-size: .9rem;
     text-transform: uppercase;
     background: linear-gradient(to right, red, orange);
+    cursor: pointer;
 
 }
 

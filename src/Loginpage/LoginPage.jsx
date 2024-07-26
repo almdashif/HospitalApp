@@ -33,7 +33,7 @@ const LoginPage = () => {
                             <div className="formInputContainer">
                                 <FaUserLock />
                                 <input type={Visible ? "text" : "password"} name="password" id="password" placeholder='password' />
-                                <a onClick={ChangeVisible} style={{ marginBottom: '-4px' }}>{Visible ? <FaEye color="#444444" /> : <FaEyeSlash color="#444444" />}</a>
+                                <a onClick={ChangeVisible} style={{ marginBottom: '-4px',cursor:'pointer' }}>{Visible ? <FaEye color="#444444" /> : <FaEyeSlash color="#444444" />}</a>
                             </div>
                             <div className='forgetPass'><a href="">forget password?</a></div>
                             <button className='signInBtn'>sign in</button>
