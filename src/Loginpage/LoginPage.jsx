@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './loginPage.css'
 import { IoIosPerson } from "react-icons/io";
 import { FaEye, FaEyeSlash, FaUserLock, FaHospitalAlt, FaBriefcaseMedical } from "react-icons/fa";
@@ -6,6 +6,11 @@ import { IoInfinite } from "react-icons/io5";
 import { FaUserDoctor } from "react-icons/fa6";
 
 const LoginPage = () => {
+    const [Visible, setVisible] = useState(false)
+    const ChangeVisible = (e) => {
+        e.preventDefault();
+        setVisible(!Visible)
+    }
     return (
         <section id='loginSection'>
             <div className="container">
@@ -27,8 +32,8 @@ const LoginPage = () => {
                             </div>
                             <div className="formInputContainer">
                                 <FaUserLock />
-                                <input type="text" name="password" id="password" placeholder='password' />
-                                <a href="" style={{ marginBottom: '-4px' }}><FaEye color="#444444" /></a>
+                                <input type={Visible ? "text" : "password"} name="password" id="password" placeholder='password' />
+                                <a onClick={ChangeVisible} style={{ marginBottom: '-4px' }}>{Visible ? <FaEye color="#444444" /> : <FaEyeSlash color="#444444" />}</a>
                             </div>
                             <div className='forgetPass'><a href="">forget password?</a></div>
                             <button className='signInBtn'>sign in</button>
@@ -59,7 +64,7 @@ const LoginPage = () => {
                 <FaBriefcaseMedical color='red' size={"5rem"} />
             </div>
             <div className="overlay-right">
-                <FaBriefcaseMedical color='orange' size={"2rem"} style={{margin:'2.5rem 0 0 1.5rem'}} />
+                <FaBriefcaseMedical color='orange' size={"2rem"} style={{ margin: '2.5rem 0 0 1.5rem' }} />
             </div>
         </section>
     )
