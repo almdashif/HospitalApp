@@ -25,7 +25,7 @@ const LoginPage = () => {
                             <p>Please fill the details to Login to your Account</p>
 
                         </div>
-                        <form action="">
+                        <form action="" onSubmit={(e) => e.preventDefault()}>
                             <div className="formInputContainer">
                                 <IoIosPerson />
                                 <input type="text" name="email" id="email" placeholder='username' />
@@ -35,7 +35,7 @@ const LoginPage = () => {
                                 <input type={Visible ? "text" : "password"} name="password" id="password" placeholder='password' />
                                 <a onClick={ChangeVisible} style={{ marginBottom: '-4px',cursor:'pointer' }}>{Visible ? <FaEye color="#444444" /> : <FaEyeSlash color="#444444" />}</a>
                             </div>
-                            <div className='forgetPass'><a href="">forget password?</a></div>
+                            <div className='forgetPass'><a href="" onClick={e => e.preventDefault()}>forget password?</a></div>
                             <button className='signInBtn'>sign in</button>
                         </form>
 
