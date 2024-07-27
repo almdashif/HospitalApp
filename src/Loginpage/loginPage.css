@@ -12,7 +12,7 @@
     position: relative;
     width: 80%;
     max-width: 1200px;
-    height: 80vh;
+    height: 85vh;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     border-radius: 10px;
@@ -21,6 +21,7 @@
     -webkit-box-shadow: -1px -3px 24px -3px rgba(201, 201, 201, 1);
     -moz-box-shadow: -1px -3px 24px -3px rgba(201, 201, 201, 1);
     box-shadow: -1px -3px 24px -3px rgba(201, 201, 201, 1);
+
 }
 
 #loginSection .container .leftContainer {
@@ -29,7 +30,6 @@
     overflow: hidden;
     padding: 2rem;
     display: flex;
-    /* background-color: pink; */
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -37,7 +37,6 @@
 }
 
 #loginSection .container .leftContainer .formContainer {
-    /* background-color: antiquewhite; */
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -68,7 +67,7 @@
 }
 
 #loginSection .container .leftContainer .formContainer .headings .companyDetails .icon {
-    font-size: 2.5rem;
+    font-size: 2rem;
 
 }
 
@@ -86,6 +85,7 @@
     padding-top: .5rem;
     color: #444444;
     text-align: center;
+    width: 90%;
 }
 
 #loginSection .container .leftContainer .formContainer form {
@@ -130,25 +130,35 @@
     padding: .5rem 1rem;
     max-width: 100%;
     border-radius: 2rem;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     color: #fefefe;
     font-size: .9rem;
     text-transform: uppercase;
     background: linear-gradient(to right, red, orange);
     cursor: pointer;
+    transition: all 1s ease;
+}
 
+#loginSection .container .leftContainer .formContainer form .signInBtn:hover {
+    background: linear-gradient(to right, orange ,red);
 }
 
 #loginSection .container .leftContainer .formContainer .appLogos {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 0 1rem;
 }
 
-#loginSection .container .leftContainer .formContainer .appLogos .logo {
-    font-size: 1.2rem;
+#loginSection .container .leftContainer .formContainer .appLogos .logoContainer {
+   width: 50px;
+   height: 50px;
 }
+#loginSection .container .leftContainer .formContainer .appLogos .logoContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+ }
 
 #loginSection .container .rightContainer {}
 
@@ -179,19 +189,22 @@
     align-items: center;
     top: -10%;
     left: -10%;
+    transform: translate(-10%,-10%);
     border-radius: 50%;
 }
+
 #loginSection .overlay-right {
     content: "";
     width: 10rem;
     height: 10rem;
     background: linear-gradient(to right, red, orange);
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     position: absolute;
-    bottom: -5%;
-    right: -7%;
+    bottom: -8%;
+    right: -8%;
+    transform: translate(-8%,-8%);
     border-radius: 50%;
     z-index: -1;
 }
